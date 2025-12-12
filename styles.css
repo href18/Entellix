@@ -192,6 +192,46 @@ h3 { margin: 0 0 10px; }
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+.gallery-grid {
+  gap: 1.25rem;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem;
+}
+
+.image-frame {
+  border-radius: 1rem;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.35), transparent 50%);
+}
+
+.image-frame.fintech {
+  background-image: linear-gradient(135deg, #0f172a, #0ea5e9);
+}
+
+.image-frame.wellness {
+  background-image: linear-gradient(135deg, #1a1f3a, #a855f7);
+}
+
+.image-frame.mobility {
+  background-image: linear-gradient(135deg, #0b1722, #22c55e);
+}
+
 .step { padding-top: 34px; }
 .step-number {
   position: absolute;
